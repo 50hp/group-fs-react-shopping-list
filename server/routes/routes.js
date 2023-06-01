@@ -24,10 +24,10 @@ router.post('/', (req, res) => {
                     VALUES ($1, $2, $3)`;
   pool
     .query(
-      sqlText[
-        (shopping.name,
+      sqlText,[
+        shopping.name,
         shopping.quantity,
-        shopping.unit)
+        shopping.unit
       ]
     )
     .then((result) => {
