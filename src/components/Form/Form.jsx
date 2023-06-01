@@ -40,9 +40,9 @@ function Form({addItem}) {
                        value = {itemName}
                        onChange={e => setItemName(e.target.value)}/>
 
-                <label htmlFor="quanityInput">Quanity:</label>
-                <input id="quanityInput"
-                       value = {itemQuanity}
+                <label htmlFor="quantityInput">Quanity:</label>
+                <input id="quantityInput"
+                       value = {itemQuantity}
                        onChange={e => setItemQuantity(e.target.value)}/>
 
                 <label htmlFor="unitInput">Unit:</label>
