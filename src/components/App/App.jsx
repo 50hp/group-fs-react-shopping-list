@@ -48,6 +48,32 @@ function App() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    const buyItem = (id) => {
+        axios.put(`shopping/buy/${id}`)
+        .then(response => {
+            console.log(response);
+            getShoppingList
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+ 
+
+
+
+
     return (
         <div className="App">
             <Header />
