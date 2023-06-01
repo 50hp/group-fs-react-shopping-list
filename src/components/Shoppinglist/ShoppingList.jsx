@@ -7,11 +7,12 @@ function ShoppingList(props) {
         const deleteItem = props.deleteItem;
         const buyItem = props.buyItem;
         const getShoppingList = props.getShoppingList
+        const clearItems = props.clearItems;
 
     return(
             <div>
 
-                <ManagementButtons getShoppingList={getShoppingList}/>
+                <ManagementButtons getShoppingList={getShoppingList} clearItems={clearItems}/>
 
                  <ul>
                     {props.shoppingList.map(item => (
