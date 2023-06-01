@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from '../Header/Header.jsx'
 import './App.css';
-import From from '../Form/Form.jsx';
+import Form from '../Form/Form.jsx';
 
 
 function App() {
@@ -90,7 +90,9 @@ function App() {
     return (
         <div className="App">
             <Header />
+            
             <main>
+            <Form addItem={addItem}/>
                 <p>Under Construction...</p>
             </main>
         </div>
