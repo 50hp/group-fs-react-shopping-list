@@ -42,6 +42,7 @@ function Form({addItem}) {
 
                 <label htmlFor="quantityInput">Quanity:</label>
                 <input id="quantityInput"
+                       type="number"
                        value = {itemQuantity}
                        onChange={e => setItemQuantity(e.target.value)}/>
 
