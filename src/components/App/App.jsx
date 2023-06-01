@@ -34,6 +34,20 @@ function App() {
     }, [])
 
 
+    const deleteItem =  (id) => {
+        axios.delete(`shopping/${id}`)
+        .then(response => {
+            console.log(response);
+            getShoppingList();
+        }).catch((error) =>{
+            console.log(error);
+        }) 
+    }
+
+
+
+
+
     return (
         <div className="App">
             <Header />
@@ -46,7 +60,7 @@ function App() {
                         <li key={item.id}>
                             {item.name} 
                             {item.quantity} {item.unit}
-                            <button>Buy</button><button>Delete</button>
+                            <button>Buy</button><button onClick={() => deleteItem(item.id)}>Delete</button>
                         </li>
                     ))}
                 </ul>
@@ -57,3 +71,13 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
