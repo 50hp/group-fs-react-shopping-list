@@ -4,7 +4,7 @@ import {useState} from 'react';
 function Form({addItem}) {
     
     const [itemName, setItemName] = useState('');
-    const [itemQuanity, setItemQuanity] = useState('');
+    const [itemQuantity, setItemQuantity] = useState('');
     const [itemUnit, setItemUnit] = useState('');
 
     let item = {};
@@ -12,10 +12,10 @@ function Form({addItem}) {
 
         event.preventDefault();
 
-        if(itemUnit && itemQuanity && itemUnit){
+        if(itemUnit && itemQuantity && itemUnit){
             item ={
                 name: itemName,
-                quanity: itemQuanity,
+                quantity: itemQuantity,
                 unit: itemUnit
             }
 
@@ -43,7 +43,7 @@ function Form({addItem}) {
                 <label htmlFor="quanityInput">Quanity:</label>
                 <input id="quanityInput"
                        value = {itemQuanity}
-                       onChange={e => setItemQuanity(e.target.value)}/>
+                       onChange={e => setItemQuantity(e.target.value)}/>
 
                 <label htmlFor="unitInput">Unit:</label>
                 <input id="unitInput"
