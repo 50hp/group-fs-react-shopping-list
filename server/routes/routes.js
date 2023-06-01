@@ -25,9 +25,9 @@ router.post('/', (req, res) => {
   pool
     .query(
       sqlText[
-        (shopping.name,
+        shopping.name,
         shopping.quantity,
-        shopping.unit)
+        shopping.unit
       ]
     )
     .then((result) => {
