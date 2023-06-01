@@ -53,13 +53,17 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-
-
-
-
-
-
-
+router.put('/reset/:id', (req, res) => {
+  const sqlText = 'UPDATE shopping SET purchase_status = FALSE'
+  pool.query (sqlText)
+  .then((result) => {
+    console.log(result.rows)
+    res.sendStatus(200)
+  }).catch(err => {
+    console.log(err)
+    res.sendStatus(500)
+  })
+})
 
 
 
