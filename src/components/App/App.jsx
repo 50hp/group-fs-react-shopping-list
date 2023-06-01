@@ -44,18 +44,18 @@ function App() {
         }) 
     }
 
+    const clearItems = (id) => {
+        axios.delete(`shopping/clear/${id}`)
+        .then(response => {
+            console.log(response);
+            getShoppingList();
+        }).catch((error) =>{
+            console.log(error);
+        }) 
 
 
 
-
-
-
-
-
-
-
-
-
+    }
 
 
     const buyItem = (id) => {
@@ -79,7 +79,7 @@ function App() {
             <main>
             <Form addItem={addItem}/>
                 <p>Under Construction...</p>
-                <ShoppingList getShoppingList={getShoppingList} shoppingList={shoppingList} deleteItem={deleteItem} buyItem={buyItem} />
+                <ShoppingList getShoppingList={getShoppingList} shoppingList={shoppingList} deleteItem={deleteItem} buyItem={buyItem} clearItems={clearItems} />
             </main>
         </div>
     );

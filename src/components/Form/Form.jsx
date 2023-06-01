@@ -27,6 +27,10 @@ function Form({addItem}) {
             return
         }
 
+        setItemName('')
+        setItemQuantity('');
+        setItemUnit('');
+
     }
 
 

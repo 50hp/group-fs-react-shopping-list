@@ -4,6 +4,7 @@ import axios from 'axios'
 
 function ManagementButtons(props) {
     const getShoppingList = props.getShoppingList
+    const clearItems = props.clearItems
 
     const resetItems = () => {
         let id = 0
@@ -19,7 +20,7 @@ function ManagementButtons(props) {
         return (
             <div>
             <button onClick={resetItems}>Reset</button>
-            <button>Clear</button>
+            <button onClick={ ()=> clearItems()}>Clear</button>
 
             </div>
 
