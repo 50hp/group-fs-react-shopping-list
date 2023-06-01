@@ -4,7 +4,7 @@ const pool = require("../modules/pool.js");
 
 //SELECT FROM change to name of table
 router.get('/', (req, res) => {
-  const sqlText = ` SELECT * FROM shopping;`;
+  const sqlText = ` SELECT * FROM shopping ORDER BY "purchase_status", "name";`;
   pool
     .query(sqlText)
     .then((result) => {
