@@ -39,4 +39,19 @@ router.post('/', (req, res) => {
       res.sendStatus(500);
     });
 });
+
+router.delete('/:id', (req, res) => {
+    const idToDelete = req.params.id
+    const sqlText = 'DELETE FROM shopping WHERE id = $1'
+    pool.query(sqlText, [idToDelete])
+    .then((result) => {
+        console.log(result.rows)
+        res.sendStatus(200)
+    }).catch((err) => {
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
+
+
 module.exports = router;
