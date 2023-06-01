@@ -6,90 +6,18 @@ import Form from '../Form/Form.jsx';
 
 
 function App() {
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
+    const [shoppingList, setShoppingList] = useState([])
 
     const addItem = (item) => {
 
     axios.post('/shopping', item)
         .then((res) => {
-            getShoppinglist();
+            getShoppingList();
         }).catch((err) => {
             alert('error with post requset', err);
         });
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const [shoppingList, setShoppingList] = useState([])
 
     const getShoppingList = () => {
         axios.get('/shopping').then(response => {
@@ -124,14 +52,6 @@ function App() {
             </main>
         </div>
     );
-
-
-
-
-
-
-
-
 
 }
 
