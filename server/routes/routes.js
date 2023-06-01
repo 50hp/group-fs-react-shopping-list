@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require("../modules/pool.js");
 
 //SELECT FROM change to name of table
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   const sqlText = ` SELECT * FROM shopping;`;
   pool
     .query(sqlText)
@@ -17,17 +17,17 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", (req, rex) => {
+router.post('/', (req, res) => {
   const shopping = req.body;
-  const sqlText = `INSERT INTO shopping ("name", "quantity", "unit", "purchase_status") 
-                    VALUES ($1, $2, $3, $4)`;
+  console.log(req.body)
+  const sqlText = `INSERT INTO shopping ("name", "quantity", "unit") 
+                    VALUES ($1, $2, $3)`;
   pool
     .query(
       sqlText[
         (shopping.name,
         shopping.quantity,
-        shopping.unit,
-        shopping.purchase_status)
+        shopping.unit)
       ]
     )
     .then((result) => {
