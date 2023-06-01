@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import ManagementButtons from './ShoppinglistParts/ManagmentButtons.jsx';
 import ItemDisplay from './ShoppinglistParts/ItemDisplay.jsx';
+import PurchasedItems from './ShoppinglistParts/ItemDisplay2.jsx';
 
 function ShoppingList(props) {
         const deleteItem = props.deleteItem;
@@ -13,7 +14,18 @@ function ShoppingList(props) {
 
                  <ul>
                     {props.shoppingList.map(item => (
-                        <ItemDisplay item={item} deleteItem={deleteItem} buyItem={buyItem} key={item.id} />
+                        item.purchase_status ? (
+                            <PurchasedItems item={item} key={item.id}  />
+                        ):(
+                            <ItemDisplay item={item} deleteItem={deleteItem} buyItem={buyItem} key={item.id} />
+
+                        )
+
+
+
+
+
+                        
                     ))}
                 </ul>
 

@@ -64,7 +64,7 @@ function App() {
         axios.put(`shopping/buy/${id}`)
         .then(response => {
             console.log(response);
-            getShoppingList
+            getShoppingList();
         }).catch((error) => {
             console.log(error);
         })
