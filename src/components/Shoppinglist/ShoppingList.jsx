@@ -6,11 +6,12 @@ import PurchasedItems from './ShoppinglistParts/ItemDisplay2.jsx';
 function ShoppingList(props) {
         const deleteItem = props.deleteItem;
         const buyItem = props.buyItem;
+        const getShoppingList = props.getShoppingList
 
     return(
             <div>
 
-                <ManagementButtons />
+                <ManagementButtons getShoppingList={getShoppingList}/>
 
                  <ul>
                     {props.shoppingList.map(item => (

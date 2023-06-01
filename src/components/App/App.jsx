@@ -58,8 +58,6 @@ function App() {
 
 
 
-
-
     const buyItem = (id) => {
         axios.put(`shopping/buy/${id}`)
         .then(response => {
@@ -81,7 +79,7 @@ function App() {
             <main>
             <Form addItem={addItem}/>
                 <p>Under Construction...</p>
-                <ShoppingList shoppingList={shoppingList} deleteItem={deleteItem} buyItem={buyItem} />
+                <ShoppingList getShoppingList={getShoppingList} shoppingList={shoppingList} deleteItem={deleteItem} buyItem={buyItem} />
             </main>
         </div>
     );
