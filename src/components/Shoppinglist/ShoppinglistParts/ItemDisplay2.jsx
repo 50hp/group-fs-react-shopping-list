@@ -9,11 +9,11 @@ const item = props.item;
 
     return (
 
-        <li>
-        {item.name} 
-        {item.quantity} {item.unit}
-        <p>Purchased</p>
-    </li>
+        <div>
+            {item.name} 
+            {item.quantity} {item.unit}
+            <p>Purchased</p>
+        </div>
 
 
     )
