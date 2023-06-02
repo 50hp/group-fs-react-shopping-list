@@ -6,12 +6,13 @@ function ItemDisplay(props){
     const buyItem = props.buyItem; 
 
         return (
-                     <li>
+                     <div>
                         {item.name} 
                         {item.quantity} {item.unit}
                         <button onClick={() => buyItem(item.id)}>Buy</button>
                         <button onClick={() => deleteItem(item.id)}>Delete</button>
-                    </li>
+                    </div>
+
         );
 
 }
