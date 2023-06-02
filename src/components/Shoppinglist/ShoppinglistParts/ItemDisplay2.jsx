@@ -8,7 +8,7 @@ function PurchasedItems (props) {
 const item = props.item;
 
     return (
-
+<>
 
         <li div ="itembox">
         {item.name} 
@@ -22,7 +22,7 @@ const item = props.item;
             <p>Purchased 🤑🤑🤑</p>
         </div>
 
-
+</>
 
     )
 }
