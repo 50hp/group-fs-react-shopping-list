@@ -14,7 +14,7 @@ function ShoppingList(props) {
 
                 <ManagementButtons getShoppingList={getShoppingList} clearItems={clearItems}/>
 
-                 <div>
+                 <div class="itemContainer">
                     {props.shoppingList.map(item => (
                         item.purchase_status ? (
                             <PurchasedItems item={item} key={item.id}  />
