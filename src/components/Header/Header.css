@@ -3,3 +3,8 @@
   text-align: center;
   padding: 0.25em;
 }
+
+.banner-text{
+  background-image: linear-gradient(to right,red, orange , yellow, green,  blue,indigo, violet);
+
+}

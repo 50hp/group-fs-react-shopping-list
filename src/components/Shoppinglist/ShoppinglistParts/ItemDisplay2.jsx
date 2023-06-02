@@ -1,4 +1,4 @@
-
+import './ItemDisplay.css'
 
 
 
@@ -9,7 +9,7 @@ const item = props.item;
 
     return (
 
-        <li>
+        <li div ="itembox">
         {item.name} 
         {item.quantity} {item.unit}
         <p>Purchased</p>

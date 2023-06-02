@@ -1,4 +1,4 @@
-
+import './ItemDisplay.css'
 
 function ItemDisplay(props){
     const item = props.item;
