@@ -2,3 +2,8 @@ main {
   width: 90%;
   margin: auto;
 }
+
+.itemContainer {
+    display: flex;
+    flex-direction: row;
+}
