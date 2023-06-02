@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './Form.css';
 
 
 function Form({addItem}) {
@@ -27,10 +28,6 @@ function Form({addItem}) {
             return
         }
 
-        setItemName('')
-        setItemQuantity('');
-        setItemUnit('');
-
     }
 
 
@@ -38,24 +35,32 @@ function Form({addItem}) {
 
         <div>
             <form onSubmit={handleSubmit}>
-
-                <label htmlFor="nameInput">Name: </label>
-                <input id="nameInput"
+                <div className ='nameInput '>
+                <label htmlFor="nameInput">Name:  </label>
+                <input className ='input'id="nameInput"
                        value = {itemName}
                        onChange={e => setItemName(e.target.value)}/>
-
+                      </div>
+                      <div className='bottom'>
+                <div className='quantity'>
                 <label htmlFor="quantityInput">Quanity:</label>
-                <input id="quantityInput"
+                <input className='input-2'id="quantityInput"
                        type="number"
                        value = {itemQuantity}
                        onChange={e => setItemQuantity(e.target.value)}/>
-
+                    </div>
+                    <div className='unit'>
                 <label htmlFor="unitInput">Unit:</label>
-                <input id="unitInput"
+                <input className='input-3' id="unitInput"
                        value = {itemUnit}
                        onChange={e => setItemUnit(e.target.value)}/>
+                       </div>
+                       </div>
+
                 <button type="submit">Done</button>
+               
             </form> 
+
 
         </div>
     );

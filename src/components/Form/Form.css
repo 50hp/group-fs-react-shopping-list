@@ -1,0 +1,53 @@
+.input{
+    align-items: left;
+    text-align: left;
+    padding-bottom: 5px;
+    background-color:aquamarine;
+    border-color: black;
+    border-width:  3px;
+    justify-content: left;
+    display: flex;
+    width: 304px;
+    height: 12px;
+}
+.input-2{
+    align-items: left;
+    text-align: center;
+    border-color: black;
+    border-width:  3px;
+    background-color: aquamarine;
+    justify-content: left;
+    display: flex;
+    width: 100px;
+
+}
+
+.input-3{
+    /* align-items: left; */
+    background-color: aquamarine;
+    border-color: black;
+    border-width:  3px;
+    justify-content: left;
+    display: flex;
+    width: 200px;
+}
+label {
+    width: 50 px;
+}
+.quantity{
+    display: inline-flex;
+    align-items: left;
+
+}
+.unit{
+    display: inline-flex;
+    align-items: left;
+    width: 150px;
+    padding-left: 10px;
+}
+.nameInput{
+    display: inline-flex;
+    align-items: left;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
