@@ -27,6 +27,12 @@ function Form({addItem}) {
             alert('all imputs must have a value');
             return
         }
+        
+        setItemName('');
+        setItemUnit('');
+        setItemQuantity('');
+
+
 
     }
 
