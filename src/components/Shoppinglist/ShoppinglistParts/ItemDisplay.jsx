@@ -1,4 +1,4 @@
-
+import './ItemDisplay.css'
 
 function ItemDisplay(props){
     const item = props.item;
@@ -6,11 +6,13 @@ function ItemDisplay(props){
     const buyItem = props.buyItem; 
 
         return (
-                     <div>
-                        {item.name} 
-                        {item.quantity} {item.unit}
-                        <button onClick={() => buyItem(item.id)}>Buy</button>
-                        <button onClick={() => deleteItem(item.id)}>Delete</button>
+                     <div class="item">
+                        <p>{item.name}</p>
+                        <p>{item.quantity} {item.unit}</p>
+                        <p>
+                        <button onClick={() => buyItem(item.id)}>Buy 💰</button>
+                        <button onClick={() => deleteItem(item.id)}>Delete 🗑️</button>
+                        </p>
                     </div>
 
         );
